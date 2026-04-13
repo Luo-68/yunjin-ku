@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frontendGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="backendGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4db33d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3fa037;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d6d7e"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#11998e"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="520" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">系统前后端分离架构图</text>
+  
+  <!-- 前端层 -->
+  <rect x="20" y="50" width="400" height="380" rx="15" fill="white" stroke="#667eea" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="50" width="400" height="40" rx="15" fill="url(#frontendGrad)"/>
+  <rect x="20" y="75" width="400" height="15" fill="url(#frontendGrad)"/>
+  <text x="220" y="77" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">前端层 (Frontend)</text>
+  
+  <!-- React应用 -->
+  <rect x="40" y="105" width="170" height="140" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="125" y="125" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">React 18 应用</text>
+  
+  <rect x="50" y="135" width="150" height="22" rx="4" fill="#e2e8f0"/>
+  <text x="125" y="150" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">TypeScript 类型系统</text>
+  
+  <rect x="50" y="162" width="150" height="22" rx="4" fill="#e2e8f0"/>
+  <text x="125" y="177" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">Vite 构建工具</text>
+  
+  <rect x="50" y="189" width="150" height="22" rx="4" fill="#e2e8f0"/>
+  <text x="125" y="204" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">TailwindCSS 样式框架</text>
+  
+  <rect x="50" y="216" width="150" height="22" rx="4" fill="#e2e8f0"/>
+  <text x="125" y="231" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">Framer Motion 动画</text>
+  
+  <!-- 页面组件 -->
+  <rect x="230" y="105" width="170" height="140" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="315" y="125" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">页面组件</text>
+  
+  <rect x="240" y="135" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="275" y="153" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">首页</text>
+  
+  <rect x="320" y="135" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="355" y="153" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">智识</text>
+  
+  <rect x="240" y="170" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="275" y="188" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">画廊</text>
+  
+  <rect x="320" y="170" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="355" y="188" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">共赏</text>
+  
+  <rect x="240" y="205" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="275" y="223" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">博物</text>
+  
+  <rect x="320" y="205" width="70" height="28" rx="4" fill="#667eea" opacity="0.8"/>
+  <text x="355" y="223" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">缘起</text>
+  
+  <!-- 状态管理 -->
+  <rect x="40" y="255" width="170" height="70" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="125" y="275" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#4a5568">状态管理</text>
+  <rect x="50" y="285" width="150" height="30" rx="4" fill="#e2e8f0"/>
+  <text x="125" y="305" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">React Hooks + Context</text>
+  
+  <!-- API层 -->
+  <rect x="230" y="255" width="170" height="70" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="315" y="275" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#4a5568">API请求层</text>
+  <rect x="240" y="285" width="150" height="30" rx="4" fill="#e2e8f0"/>
+  <text x="315" y="305" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">Axios HTTP客户端</text>
+  
+  <!-- 路由 -->
+  <rect x="40" y="335" width="360" height="45" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="220" y="355" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#4a5568">React Router v6 路由管理</text>
+  <text x="220" y="372" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#718096">SPA单页应用 · 懒加载 · 路由守卫</text>
+  
+  <!-- 端口标识 -->
+  <rect x="40" y="390" width="360" height="30" rx="5" fill="#667eea" opacity="0.1"/>
+  <text x="220" y="410" font-family="Arial" font-size="10" text-anchor="middle" fill="#667eea">部署端口: Nginx:80/443 (生产) | Vite:5173 (开发)</text>
+  
+  <!-- 中间箭头 -->
+  <rect x="440" y="180" width="80" height="120" rx="10" fill="#f1f5f9" stroke="#cbd5e0"/>
+  <text x="480" y="205" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="#4a5568">通信层</text>
+  <path d="M 480 220 L 480 240" stroke="#667eea" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <path d="M 480 260 L 480 280" stroke="#11998e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="480" y="295" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">REST API</text>
+  <text x="480" y="310" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">JWT Auth</text>
+  
+  <!-- 后端层 -->
+  <rect x="540" y="50" width="340" height="200" rx="15" fill="white" stroke="#11998e" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="50" width="340" height="40" rx="15" fill="url(#backendGrad)"/>
+  <rect x="540" y="75" width="340" height="15" fill="url(#backendGrad)"/>
+  <text x="710" y="77" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">后端层 (Backend)</text>
+  
+  <!-- Node.js -->
+  <rect x="555" y="105" width="155" height="80" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="632" y="125" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">Node.js 服务</text>
+  <rect x="565" y="135" width="135" height="20" rx="4" fill="#e2e8f0"/>
+  <text x="632" y="149" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">Express.js 框架</text>
+  <rect x="565" y="158" width="135" height="20" rx="4" fill="#e2e8f0"/>
+  <text x="632" y="172" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">JWT 身份认证</text>
+  
+  <!-- API路由 -->
+  <rect x="720" y="105" width="145" height="80" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="792" y="125" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">API路由</text>
+  <rect x="730" y="135" width="125" height="20" rx="4" fill="#e2e8f0"/>
+  <text x="792" y="149" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">/api/auth 认证</text>
+  <rect x="730" y="158" width="125" height="20" rx="4" fill="#e2e8f0"/>
+  <text x="792" y="172" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">/api/posts 内容</text>
+  
+  <!-- 中间件 -->
+  <rect x="555" y="195" width="310" height="45" rx="8" fill="#edf2f7" stroke="#cbd5e0"/>
+  <text x="710" y="215" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#4a5568">中间件: Multer文件上传 · CORS跨域 · 压缩 · 日志</text>
+  <text x="710" y="232" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">Port: 3001</text>
+  
+  <!-- AI服务层 -->
+  <rect x="540" y="270" width="170" height="90" rx="10" fill="white" stroke="#f5576c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="270" width="170" height="28" rx="10" fill="url(#aiGrad)"/>
+  <text x="625" y="289" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">AI识别服务</text>
+  <rect x="550" y="305" width="150" height="22" rx="4" fill="#fef2f2"/>
+  <text x="625" y="320" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#e53e3e">YOLOv8 模型推理</text>
+  <rect x="550" y="330" width="150" height="22" rx="4" fill="#fef2f2"/>
+  <text x="625" y="345" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">Flask API · Port: 5000</text>
+  
+  <!-- 数据库层 -->
+  <rect x="720" y="270" width="160" height="90" rx="10" fill="white" stroke="#4db33d" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="720" y="270" width="160" height="28" rx="10" fill="url(#dbGrad)"/>
+  <text x="800" y="289" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">MongoDB</text>
+  <rect x="730" y="305" width="140" height="22" rx="4" fill="#f0fff4"/>
+  <text x="800" y="320" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#38a169">Mongoose ODM</text>
+  <rect x="730" y="330" width="140" height="22" rx="4" fill="#f0fff4"/>
+  <text x="800" y="345" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#718096">users, posts, comments</text>
+  
+  <!-- 连接箭头 -->
+  <path d="M 430 240 L 445 240" stroke="#667eea" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <path d="M 530 240 L 545 240" stroke="#11998e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  
+  <!-- AI服务连接 -->
+  <path d="M 625 195 L 625 265" stroke="#f5576c" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  
+  <!-- MongoDB连接 -->
+  <path d="M 710 195 L 750 265" stroke="#4db33d" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  
+  <!-- 底部说明 -->
+  <rect x="20" y="380" width="500" height="50" rx="8" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="40" y="400" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#2d3748">前后端分离优势：</text>
+  <text x="40" y="418" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• 独立开发部署，提高开发效率 · 前端静态资源CDN加速 · 后端API可横向扩展</text>
+  
+  <rect x="540" y="380" width="340" height="50" rx="8" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="560" y="400" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#2d3748">安全机制：</text>
+  <text x="560" y="418" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• JWT Token认证 · CORS跨域控制 · 密码BCrypt加密</text>
+  
+  <!-- 数据流向说明 -->
+  <rect x="20" y="445" width="860" height="55" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="50" y="468" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#4a5568">数据流向：</text>
+  <text x="50" y="488" font-family="Microsoft YaHei, Arial" font-size="9" fill="#718096">用户请求 → Nginx反向代理 → 前端静态资源 / 后端API → Node.js处理 → MongoDB存储 / AI服务识别 → 返回响应</text>
+</svg>

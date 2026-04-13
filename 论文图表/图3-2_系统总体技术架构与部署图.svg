@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="950" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nginxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#009639;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#007a30;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#68a063;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3c873a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mongoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4db33d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3fa037;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3776ab;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5f8a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="950" height="600" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="475" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">系统总体技术架构与部署图</text>
+  
+  <!-- 云环境边界 -->
+  <rect x="30" y="45" width="890" height="510" rx="20" fill="url(#cloudGrad)" opacity="0.3" stroke="#f5a623" stroke-width="2" stroke-dasharray="15,5"/>
+  <text x="60" y="70" font-family="Microsoft YaHei, Arial" font-size="12" fill="#c76c00">☁️ 阿里云 ECS 服务器 (47.110.125.139)</text>
+  
+  <!-- 用户端 -->
+  <rect x="50" y="90" width="150" height="180" rx="10" fill="white" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125" y="115" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">用户终端</text>
+  
+  <rect x="65" y="130" width="120" height="35" rx="5" fill="#edf2f7"/>
+  <text x="125" y="145" font-family="Arial" font-size="16" text-anchor="middle">🖥️</text>
+  <text x="125" y="160" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#718096">PC浏览器</text>
+  
+  <rect x="65" y="175" width="120" height="35" rx="5" fill="#edf2f7"/>
+  <text x="125" y="190" font-family="Arial" font-size="16" text-anchor="middle">📱</text>
+  <text x="125" y="205" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#718096">移动端浏览器</text>
+  
+  <rect x="65" y="220" width="120" height="35" rx="5" fill="#edf2f7"/>
+  <text x="125" y="235" font-family="Arial" font-size="16" text-anchor="middle">🔐</text>
+  <text x="125" y="250" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#718096">JWT Token认证</text>
+  
+  <!-- 箭头：用户到Nginx -->
+  <path d="M 205 180 L 270 180" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="238" y="170" font-family="Arial" font-size="8" fill="#718096">HTTPS</text>
+  
+  <!-- Nginx反向代理 -->
+  <rect x="280" y="90" width="140" height="180" rx="10" fill="url(#nginxGrad)" filter="url(#shadow)"/>
+  <text x="350" y="115" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Nginx</text>
+  <text x="350" y="130" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.9)">反向代理</text>
+  
+  <rect x="295" y="145" width="110" height="30" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="350" y="158" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">静态资源服务</text>
+  <text x="350" y="170" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">/dist/*</text>
+  
+  <rect x="295" y="180" width="110" height="30" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="350" y="193" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">API代理转发</text>
+  <text x="350" y="205" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">/api/* → :3001</text>
+  
+  <rect x="295" y="215" width="110" height="25" rx="5" fill="rgba(255,255,255,0.15)"/>
+  <text x="350" y="232" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">SSL证书</text>
+  
+  <!-- 箭头：Nginx到Node.js -->
+  <path d="M 425 150 L 480 150" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="453" y="140" font-family="Arial" font-size="8" fill="#718096">:3001</text>
+  
+  <!-- Node.js 后端 -->
+  <rect x="490" y="90" width="160" height="180" rx="10" fill="url(#nodeGrad)" filter="url(#shadow)"/>
+  <text x="570" y="115" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Node.js</text>
+  <text x="570" y="130" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.9)">Express.js 后端</text>
+  
+  <rect x="505" y="145" width="130" height="22" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="160" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">用户认证 (JWT)</text>
+  
+  <rect x="505" y="172" width="130" height="22" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="187" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">RESTful API</text>
+  
+  <rect x="505" y="199" width="130" height="22" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="214" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">文件上传 (Multer)</text>
+  
+  <rect x="505" y="226" width="130" height="28" rx="5" fill="rgba(255,255,255,0.15)"/>
+  <text x="570" y="238" font-family="Microsoft YaHei, Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.9)">PM2 进程管理</text>
+  <text x="570" y="250" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">Port: 3001</text>
+  
+  <!-- 箭头：Node.js到MongoDB -->
+  <path d="M 570 275 L 570 320" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="585" y="300" font-family="Arial" font-size="8" fill="#718096">Mongoose</text>
+  
+  <!-- MongoDB数据库 -->
+  <rect x="480" y="330" width="180" height="100" rx="10" fill="url(#mongoGrad)" filter="url(#shadow)"/>
+  <text x="570" y="355" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">MongoDB</text>
+  <text x="570" y="370" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.9)">NoSQL 数据库</text>
+  
+  <rect x="495" y="385" width="150" height="35" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="400" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">Collections:</text>
+  <text x="570" y="413" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">users, posts, comments...</text>
+  
+  <!-- 箭头：Node.js到AI服务 -->
+  <path d="M 655 180 L 710 180" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="683" y="170" font-family="Arial" font-size="8" fill="#718096">:5000</text>
+  
+  <!-- Python AI服务 -->
+  <rect x="720" y="90" width="180" height="180" rx="10" fill="url(#pythonGrad)" filter="url(#shadow)"/>
+  <text x="810" y="115" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Python AI</text>
+  <text x="810" y="130" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.9)">智能识别服务</text>
+  
+  <rect x="735" y="145" width="150" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="810" y="162" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">YOLOv8 模型</text>
+  
+  <rect x="735" y="175" width="150" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="810" y="192" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">民族服饰识别</text>
+  
+  <rect x="735" y="205" width="150" height="22" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="810" y="220" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">OpenCV 预处理</text>
+  
+  <rect x="735" y="232" width="150" height="22" rx="5" fill="rgba(255,255,255,0.15)"/>
+  <text x="810" y="247" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">Flask API Port: 5000</text>
+  
+  <!-- 文件存储 -->
+  <rect x="720" y="330" width="180" height="100" rx="10" fill="#ff9800" filter="url(#shadow)"/>
+  <text x="810" y="355" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">文件存储</text>
+  <text x="810" y="370" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.9)">图片/视频资源</text>
+  
+  <rect x="735" y="385" width="150" height="35" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="810" y="400" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="white">本地存储</text>
+  <text x="810" y="413" font-family="Arial" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.8)">/uploads/*</text>
+  
+  <!-- 箭头：AI服务到文件存储 -->
+  <path d="M 810 275 L 810 325" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 技术栈说明 -->
+  <rect x="50" y="460" width="890" height="75" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="70" y="483" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#2d3748">技术栈详情</text>
+  
+  <text x="70" y="503" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">前端: React 18 + TypeScript + Vite + TailwindCSS + Framer Motion + GSAP</text>
+  <text x="70" y="520" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">后端: Node.js + Express + JWT + Mongoose + Multer + Nodemailer</text>
+  
+  <text x="500" y="503" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">AI服务: Python + Flask + YOLOv8 + OpenCV</text>
+  <text x="500" y="520" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">部署: 阿里云ECS + Nginx + PM2 + MongoDB</text>
+  
+  <!-- 图例 -->
+  <rect x="280" y="330" width="180" height="100" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="370" y="352" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#2d3748">图例说明</text>
+  
+  <rect x="295" y="365" width="20" height="12" rx="3" fill="url(#nginxGrad)"/>
+  <text x="320" y="375" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">Nginx 反向代理</text>
+  
+  <rect x="295" y="383" width="20" height="12" rx="3" fill="url(#nodeGrad)"/>
+  <text x="320" y="393" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">Node.js 后端</text>
+  
+  <rect x="295" y="401" width="20" height="12" rx="3" fill="url(#mongoGrad)"/>
+  <text x="320" y="411" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">MongoDB 数据库</text>
+  
+  <line x1="415" y1="371" x2="445" y2="371" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="375" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">数据流向</text>
+  
+  <rect x="415" y="383" width="20" height="12" rx="3" fill="url(#pythonGrad)"/>
+  <text x="440" y="393" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">AI服务</text>
+</svg>

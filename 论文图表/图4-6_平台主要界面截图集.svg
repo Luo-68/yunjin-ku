@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="650" fill="#f5f7fa"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">"云矜ku"平台主要界面截图集</text>
+  <text x="450" y="45" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">请访问 http://47.110.125.139 截取实际界面替换此图</text>
+  
+  <!-- 截图1：首页 -->
+  <rect x="30" y="60" width="410" height="240" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <rect x="30" y="60" width="410" height="28" rx="10" fill="url(#headerGrad)"/>
+  <rect x="30" y="80" width="410" height="8" fill="url(#headerGrad)"/>
+  <text x="235" y="80" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">1. 首页</text>
+  
+  <!-- 首页模拟内容 -->
+  <rect x="45" y="98" width="380" height="145" rx="5" fill="#f8f9fa"/>
+  <text x="235" y="125" font-family="Arial" font-size="22" text-anchor="middle" fill="#bdc3c7">🏠</text>
+  <text x="235" y="148" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">首页展示区域</text>
+  <text x="60" y="168" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 导航栏：首页 | 智识 | 锦绣 | 博物 | 共赏 | 缘起</text>
+  <text x="60" y="183" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 英雄区：标题 + 搜索框 + 粒子动画背景</text>
+  <text x="60" y="198" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 三大功能卡片：智能识别 | 锦绣画廊 | 文化共赏</text>
+  <text x="60" y="213" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 技术流程：高精采集 → 特征提取 → 语义分析 → 图谱构建</text>
+  
+  <text x="235" y="235" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#3498db">URL: /</text>
+  
+  <!-- 截图2：智能识别页 -->
+  <rect x="460" y="60" width="410" height="240" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <rect x="460" y="60" width="410" height="28" rx="10" fill="url(#headerGrad)"/>
+  <rect x="460" y="80" width="410" height="8" fill="url(#headerGrad)"/>
+  <text x="665" y="80" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">2. 智能识别页</text>
+  
+  <!-- 识别页模拟内容 -->
+  <rect x="475" y="98" width="380" height="145" rx="5" fill="#f8f9fa"/>
+  <text x="665" y="125" font-family="Arial" font-size="22" text-anchor="middle" fill="#bdc3c7">🔍</text>
+  <text x="665" y="148" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">智能识别展示区域</text>
+  <text x="490" y="168" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 上传区域：点击或拖拽上传图片</text>
+  <text x="490" y="183" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 识别结果：显示民族名称、置信度</text>
+  <text x="490" y="198" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 文化解读：民族服饰特点介绍</text>
+  <text x="490" y="213" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 相关推荐：相似服饰展示</text>
+  
+  <text x="665" y="235" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#3498db">URL: /recognition</text>
+  
+  <!-- 截图3：锦绣画廊页 -->
+  <rect x="30" y="320" width="410" height="240" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <rect x="30" y="320" width="410" height="28" rx="10" fill="url(#headerGrad)"/>
+  <rect x="30" y="340" width="410" height="8" fill="url(#headerGrad)"/>
+  <text x="235" y="340" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">3. 锦绣画廊页</text>
+  
+  <!-- 画廊模拟内容 -->
+  <rect x="45" y="358" width="380" height="145" rx="5" fill="#f8f9fa"/>
+  <text x="235" y="385" font-family="Arial" font-size="22" text-anchor="middle" fill="#bdc3c7">🖼️</text>
+  <text x="235" y="408" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">画廊展示区域</text>
+  <text x="60" y="428" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 民族分类筛选：左侧导航栏</text>
+  <text x="60" y="443" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 图片网格：瀑布流布局展示</text>
+  <text x="60" y="458" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 图片卡片：悬停显示民族信息</text>
+  <text x="60" y="473" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 点击查看：大图预览模式</text>
+  
+  <text x="235" y="495" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#3498db">URL: /gallery</text>
+  
+  <!-- 截图4：文化共赏社区页 -->
+  <rect x="460" y="320" width="410" height="240" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <rect x="460" y="320" width="410" height="28" rx="10" fill="url(#headerGrad)"/>
+  <rect x="460" y="340" width="410" height="8" fill="url(#headerGrad)"/>
+  <text x="665" y="340" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">4. 文化共赏社区页</text>
+  
+  <!-- 社区模拟内容 -->
+  <rect x="475" y="358" width="380" height="145" rx="5" fill="#f8f9fa"/>
+  <text x="665" y="385" font-family="Arial" font-size="22" text-anchor="middle" fill="#bdc3c7">💬</text>
+  <text x="665" y="408" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">社区展示区域</text>
+  <text x="490" y="428" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 帖子列表：卡片式瀑布流展示</text>
+  <text x="490" y="443" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 用户互动：点赞、评论、收藏</text>
+  <text x="490" y="458" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 发布按钮：右下角悬浮按钮</text>
+  <text x="490" y="473" font-family="Microsoft YaHei, Arial" font-size="9" fill="#95a5a6">• 消息通知：顶部提示</text>
+  
+  <text x="665" y="495" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#3498db">URL: /share</text>
+  
+  <!-- 底部说明 -->
+  <rect x="30" y="580" width="840" height="55" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <text x="50" y="600" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#2c3e50">截图说明：</text>
+  <text x="50" y="618" font-family="Microsoft YaHei, Arial" font-size="9" fill="#5d6d7e">1. 请使用浏览器访问线上系统，使用截图工具截取高清界面</text>
+  <text x="450" y="600" font-family="Microsoft YaHei, Arial" font-size="9" fill="#5d6d7e">2. 建议分辨率：1920×1080</text>
+  <text x="450" y="618" font-family="Microsoft YaHei, Arial" font-size="9" fill="#5d6d7e">3. 可标注关键功能区域</text>
+</svg>

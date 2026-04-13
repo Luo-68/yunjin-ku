@@ -1,0 +1,11 @@
+names:
+  0: neckline
+  1: embroidery
+  2: silver
+  3: pattern
+  4: sleeve
+  5: waistband
+nc: 6
+path: E:\开发者\Yun Jin Ku\model\data
+train: images/train
+val: images/val

@@ -1,0 +1,6 @@
+# 验证集图像列表
+# 每行一个图像文件路径（相对于 data/images 目录）
+# 示例格式：
+# val/苗族_image1.jpg
+# val/藏族_image2.jpg
+# val/彝族_image3.jpg

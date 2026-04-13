@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="850" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="actorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="850" height="600" fill="#fafbfc"/>
+  
+  <!-- 标题 -->
+  <text x="425" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">系统核心功能用例图</text>
+  
+  <!-- 系统边界 -->
+  <rect x="200" y="45" width="580" height="510" rx="15" fill="white" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="70" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#4a5568">「云矜ku」民族服饰文化平台</text>
+  
+  <!-- 普通用户角色 -->
+  <rect x="30" y="100" width="140" height="180" rx="10" fill="url(#actorGrad)" filter="url(#shadow)"/>
+  <text x="100" y="125" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#2d3748">👤 普通用户</text>
+  <ellipse cx="100" cy="150" rx="18" ry="18" fill="#667eea"/>
+  <circle cx="100" cy="142" r="6" fill="white"/>
+  <ellipse cx="100" cy="158" rx="8" ry="5" fill="white"/>
+  
+  <text x="100" y="185" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 浏览内容</text>
+  <text x="100" y="200" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 智能识别</text>
+  <text x="100" y="215" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 注册登录</text>
+  <text x="100" y="230" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 发布内容</text>
+  <text x="100" y="245" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 互动交流</text>
+  <text x="100" y="260" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 个人中心</text>
+  
+  <!-- 管理员角色 -->
+  <rect x="30" y="310" width="140" height="120" rx="10" fill="#ffecd2" filter="url(#shadow)"/>
+  <text x="100" y="335" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#2d3748">👑 管理员</text>
+  <ellipse cx="100" cy="360" rx="18" ry="18" fill="#f5576c"/>
+  <circle cx="100" cy="352" r="6" fill="white"/>
+  <ellipse cx="100" cy="368" rx="8" ry="5" fill="white"/>
+  
+  <text x="100" y="395" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 内容审核</text>
+  <text x="100" y="410" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 用户管理</text>
+  <text x="100" y="425" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 数据统计</text>
+  
+  <!-- AI系统角色 -->
+  <rect x="30" y="460" width="140" height="80" rx="10" fill="#e0f2fe" filter="url(#shadow)"/>
+  <text x="100" y="485" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#2d3748">🤖 AI系统</text>
+  <ellipse cx="100" cy="510" rx="18" ry="18" fill="#0ea5e9"/>
+  <text x="100" y="515" font-family="Arial" font-size="10" text-anchor="middle" fill="white">AI</text>
+  
+  <text x="100" y="535" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">· 智能识别</text>
+  
+  <!-- 用例1：用户认证模块 -->
+  <ellipse cx="290" cy="120" rx="70" ry="25" fill="#edf2f7" stroke="#667eea" stroke-width="2"/>
+  <text x="290" y="125" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">用户注册/登录</text>
+  
+  <ellipse cx="290" cy="170" rx="70" ry="25" fill="#edf2f7" stroke="#667eea" stroke-width="2"/>
+  <text x="290" y="175" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">邮箱验证</text>
+  
+  <ellipse cx="290" cy="220" rx="70" ry="25" fill="#edf2f7" stroke="#667eea" stroke-width="2"/>
+  <text x="290" y="225" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">密码重置</text>
+  
+  <!-- 用例2：智能识别模块 -->
+  <ellipse cx="420" cy="120" rx="70" ry="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="125" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">上传图片</text>
+  
+  <ellipse cx="420" cy="170" rx="70" ry="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="175" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">智能识别服饰</text>
+  
+  <ellipse cx="420" cy="220" rx="70" ry="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="225" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">查看识别结果</text>
+  
+  <ellipse cx="420" cy="270" rx="70" ry="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="275" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">文化知识解读</text>
+  
+  <!-- 用例3：画廊浏览模块 -->
+  <ellipse cx="550" cy="120" rx="70" ry="25" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="550" y="125" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">浏览画廊</text>
+  
+  <ellipse cx="550" cy="170" rx="70" ry="25" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="550" y="175" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">按民族筛选</text>
+  
+  <ellipse cx="550" cy="220" rx="70" ry="25" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="550" y="225" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">查看大图</text>
+  
+  <!-- 用例4：社区互动模块 -->
+  <ellipse cx="680" cy="120" rx="70" ry="25" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="680" y="125" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">发布帖子</text>
+  
+  <ellipse cx="680" cy="170" rx="70" ry="25" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="680" y="175" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">点赞/评论</text>
+  
+  <ellipse cx="680" cy="220" rx="70" ry="25" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="680" y="225" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">收藏内容</text>
+  
+  <ellipse cx="680" cy="270" rx="70" ry="25" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="680" y="275" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">关注用户</text>
+  
+  <!-- 用例5：个人中心模块 -->
+  <ellipse cx="290" cy="320" rx="70" ry="25" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="290" y="325" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">编辑资料</text>
+  
+  <ellipse cx="290" cy="370" rx="70" ry="25" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="290" y="375" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">管理发布</text>
+  
+  <ellipse cx="290" cy="420" rx="70" ry="25" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="290" y="425" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">查看收藏</text>
+  
+  <!-- 用例6：后台管理模块 -->
+  <ellipse cx="550" cy="340" rx="70" ry="25" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="550" y="345" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">内容审核</text>
+  
+  <ellipse cx="550" cy="390" rx="70" ry="25" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="550" y="395" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">用户管理</text>
+  
+  <ellipse cx="550" cy="440" rx="70" ry="25" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="550" y="445" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">数据统计</text>
+  
+  <!-- 用例7：AI识别服务 -->
+  <ellipse cx="420" cy="480" rx="70" ry="25" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text x="420" y="485" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">模型推理</text>
+  
+  <ellipse cx="420" cy="530" rx="70" ry="25" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text x="420" y="535" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">返回识别结果</text>
+  
+  <!-- 连接线 - 普通用户 -->
+  <line x1="170" y1="130" x2="220" y2="120" stroke="#667eea" stroke-width="1.5"/>
+  <line x1="170" y1="150" x2="220" y2="170" stroke="#667eea" stroke-width="1.5"/>
+  <line x1="170" y1="170" x2="220" y2="220" stroke="#667eea" stroke-width="1.5"/>
+  
+  <line x1="170" y1="140" x2="350" y2="120" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="170" y1="160" x2="350" y2="170" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="170" y1="180" x2="350" y2="220" stroke="#f59e0b" stroke-width="1.5"/>
+  
+  <line x1="170" y1="190" x2="480" y2="120" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="170" y1="200" x2="480" y2="170" stroke="#10b981" stroke-width="1.5"/>
+  
+  <line x1="170" y1="210" x2="610" y2="120" stroke="#ec4899" stroke-width="1.5"/>
+  <line x1="170" y1="220" x2="610" y2="170" stroke="#ec4899" stroke-width="1.5"/>
+  <line x1="170" y1="230" x2="610" y2="220" stroke="#ec4899" stroke-width="1.5"/>
+  
+  <line x1="170" y1="250" x2="220" y2="320" stroke="#6366f1" stroke-width="1.5"/>
+  <line x1="170" y1="260" x2="220" y2="370" stroke="#6366f1" stroke-width="1.5"/>
+  
+  <!-- 连接线 - 管理员 -->
+  <line x1="170" y1="370" x2="480" y2="340" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="170" y1="390" x2="480" y2="390" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="170" y1="410" x2="480" y2="440" stroke="#ef4444" stroke-width="1.5"/>
+  
+  <!-- 连接线 - AI系统 -->
+  <line x1="170" y1="510" x2="350" y2="480" stroke="#06b6d4" stroke-width="1.5"/>
+  <line x1="170" y1="520" x2="350" y2="530" stroke="#06b6d4" stroke-width="1.5"/>
+  
+  <!-- 关联关系 - AI与识别 -->
+  <line x1="420" y1="195" x2="420" y2="455" stroke="#06b6d4" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="430" y="330" font-family="Microsoft YaHei, Arial" font-size="7" fill="#06b6d4">《extend》</text>
+  
+  <!-- 图例 -->
+  <rect x="700" y="460" width="130" height="90" rx="5" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="765" y="478" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="#4a5568">图例</text>
+  
+  <ellipse cx="720" cy="495" rx="12" ry="8" fill="#edf2f7" stroke="#667eea"/>
+  <text x="755" y="499" font-family="Microsoft YaHei, Arial" font-size="7" fill="#4a5568">用例</text>
+  
+  <rect x="712" y="510" width="16" height="12" rx="3" fill="url(#actorGrad)"/>
+  <text x="755" y="520" font-family="Microsoft YaHei, Arial" font-size="7" fill="#4a5568">角色</text>
+  
+  <line x1="710" y1="535" x2="730" y2="535" stroke="#667eea" stroke-width="1.5"/>
+  <text x="755" y="539" font-family="Microsoft YaHei, Arial" font-size="7" fill="#4a5568">关联</text>
+</svg>

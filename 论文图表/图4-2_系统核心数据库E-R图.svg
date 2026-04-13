@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="entityGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="28" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">系统核心数据库E-R图</text>
+  
+  <!-- User实体 -->
+  <rect x="50" y="60" width="180" height="220" rx="8" fill="white" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50" y="60" width="180" height="32" rx="8" fill="#3b82f6"/>
+  <text x="140" y="82" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">User 用户</text>
+  
+  <text x="65" y="110" font-family="Arial" font-size="10" fill="#3b82f6">🔑 _id: ObjectId</text>
+  <text x="65" y="128" font-family="Arial" font-size="10" fill="#4a5568">username: String</text>
+  <text x="65" y="146" font-family="Arial" font-size="10" fill="#4a5568">email: String</text>
+  <text x="65" y="164" font-family="Arial" font-size="10" fill="#4a5568">password: String</text>
+  <text x="65" y="182" font-family="Arial" font-size="10" fill="#4a5568">avatar: String</text>
+  <text x="65" y="200" font-family="Arial" font-size="10" fill="#4a5568">bio: String</text>
+  <text x="65" y="218" font-family="Arial" font-size="10" fill="#4a5568">isVerified: Boolean</text>
+  <text x="65" y="236" font-family="Arial" font-size="10" fill="#4a5568">verificationToken: String</text>
+  <text x="65" y="254" font-family="Arial" font-size="10" fill="#4a5568">resetPasswordToken: String</text>
+  <text x="65" y="272" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- Post实体 -->
+  <rect x="360" y="60" width="180" height="260" rx="8" fill="white" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="60" width="180" height="32" rx="8" fill="#10b981"/>
+  <text x="450" y="82" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Post 帖子</text>
+  
+  <text x="375" y="110" font-family="Arial" font-size="10" fill="#10b981">🔑 _id: ObjectId</text>
+  <text x="375" y="128" font-family="Arial" font-size="10" fill="#f59e0b">🔗 author: ObjectId</text>
+  <text x="375" y="146" font-family="Arial" font-size="10" fill="#4a5568">description: String</text>
+  <text x="375" y="164" font-family="Arial" font-size="10" fill="#4a5568">mediaType: String</text>
+  <text x="375" y="182" font-family="Arial" font-size="10" fill="#4a5568">mediaUrls: [String]</text>
+  <text x="375" y="200" font-family="Arial" font-size="10" fill="#4a5568">coverUrl: String</text>
+  <text x="375" y="218" font-family="Arial" font-size="10" fill="#4a5568">music: Object</text>
+  <text x="375" y="236" font-family="Arial" font-size="10" fill="#4a5568">tags: [String]</text>
+  <text x="375" y="254" font-family="Arial" font-size="10" fill="#4a5568">topics: [String]</text>
+  <text x="375" y="272" font-family="Arial" font-size="10" fill="#4a5568">location: String</text>
+  <text x="375" y="290" font-family="Arial" font-size="10" fill="#4a5568">stats: Object</text>
+  <text x="375" y="308" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- Comment实体 -->
+  <rect x="670" y="60" width="180" height="200" rx="8" fill="white" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670" y="60" width="180" height="32" rx="8" fill="#f59e0b"/>
+  <text x="760" y="82" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Comment 评论</text>
+  
+  <text x="685" y="110" font-family="Arial" font-size="10" fill="#f59e0b">🔑 _id: ObjectId</text>
+  <text x="685" y="128" font-family="Arial" font-size="10" fill="#3b82f6">🔗 post: ObjectId</text>
+  <text x="685" y="146" font-family="Arial" font-size="10" fill="#3b82f6">🔗 author: ObjectId</text>
+  <text x="685" y="164" font-family="Arial" font-size="10" fill="#4a5568">content: String</text>
+  <text x="685" y="182" font-family="Arial" font-size="10" fill="#f59e0b">🔗 parentComment: ObjectId</text>
+  <text x="685" y="200" font-family="Arial" font-size="10" fill="#f59e0b">🔗 replyTo: ObjectId</text>
+  <text x="685" y="218" font-family="Arial" font-size="10" fill="#4a5568">likeCount: Number</text>
+  <text x="685" y="236" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- Collection实体 -->
+  <rect x="50" y="340" width="180" height="160" rx="8" fill="white" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50" y="340" width="180" height="32" rx="8" fill="#8b5cf6"/>
+  <text x="140" y="362" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Collection 收藏</text>
+  
+  <text x="65" y="390" font-family="Arial" font-size="10" fill="#8b5cf6">🔑 _id: ObjectId</text>
+  <text x="65" y="408" font-family="Arial" font-size="10" fill="#3b82f6">🔗 user: ObjectId</text>
+  <text x="65" y="426" font-family="Arial" font-size="10" fill="#10b981">🔗 post: ObjectId</text>
+  <text x="65" y="444" font-family="Arial" font-size="10" fill="#4a5568">folderName: String</text>
+  <text x="65" y="462" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- Follow实体 -->
+  <rect x="360" y="360" width="180" height="140" rx="8" fill="white" stroke="#ec4899" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="360" width="180" height="32" rx="8" fill="#ec4899"/>
+  <text x="450" y="382" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Follow 关注</text>
+  
+  <text x="375" y="410" font-family="Arial" font-size="10" fill="#ec4899">🔑 _id: ObjectId</text>
+  <text x="375" y="428" font-family="Arial" font-size="10" fill="#3b82f6">🔗 follower: ObjectId</text>
+  <text x="375" y="446" font-family="Arial" font-size="10" fill="#3b82f6">🔗 following: ObjectId</text>
+  <text x="375" y="464" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- Like实体 -->
+  <rect x="670" y="300" width="180" height="140" rx="8" fill="white" stroke="#ef4444" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670" y="300" width="180" height="32" rx="8" fill="#ef4444"/>
+  <text x="760" y="322" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Like 点赞</text>
+  
+  <text x="685" y="350" font-family="Arial" font-size="10" fill="#ef4444">🔑 _id: ObjectId</text>
+  <text x="685" y="368" font-family="Arial" font-size="10" fill="#3b82f6">🔗 user: ObjectId</text>
+  <text x="685" y="386" font-family="Arial" font-size="10" fill="#10b981">🔗 post: ObjectId</text>
+  <text x="685" y="404" font-family="Arial" font-size="10" fill="#718096">timestamps</text>
+  
+  <!-- 关系线 User-Post (1:N) -->
+  <line x1="230" y1="140" x2="360" y2="140" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="235" cy="140" r="4" fill="#3b82f6"/>
+  <text x="265" y="130" font-family="Arial" font-size="9" fill="#3b82f6">1</text>
+  <text x="340" y="130" font-family="Arial" font-size="9" fill="#10b981">N</text>
+  <text x="295" y="155" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">发布</text>
+  
+  <!-- 关系线 User-Comment (1:N) -->
+  <path d="M 230 200 Q 300 200 300 150 Q 300 100 670 100" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  <circle cx="235" cy="200" r="3" fill="#3b82f6"/>
+  <text x="260" y="175" font-family="Arial" font-size="9" fill="#3b82f6">1</text>
+  <text x="655" y="95" font-family="Arial" font-size="9" fill="#f59e0b">N</text>
+  
+  <!-- 关系线 Post-Comment (1:N) -->
+  <line x1="540" y1="140" x2="670" y2="140" stroke="#10b981" stroke-width="2"/>
+  <circle cx="545" cy="140" r="4" fill="#10b981"/>
+  <text x="575" y="130" font-family="Arial" font-size="9" fill="#10b981">1</text>
+  <text x="650" y="130" font-family="Arial" font-size="9" fill="#f59e0b">N</text>
+  <text x="605" y="155" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">评论</text>
+  
+  <!-- 关系线 User-Collection (1:N) -->
+  <line x1="140" y1="280" x2="140" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="140" cy="285" r="4" fill="#3b82f6"/>
+  <text x="150" y="300" font-family="Arial" font-size="9" fill="#3b82f6">1</text>
+  <text x="150" y="335" font-family="Arial" font-size="9" fill="#8b5cf6">N</text>
+  <text x="155" y="315" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">收藏</text>
+  
+  <!-- 关系线 Post-Collection (1:N) -->
+  <path d="M 360 220 Q 280 220 280 380 Q 280 420 230 420" stroke="#10b981" stroke-width="1.5" fill="none"/>
+  <circle cx="355" cy="220" r="3" fill="#10b981"/>
+  <text x="295" y="400" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">被收藏</text>
+  
+  <!-- 关系线 User-Follow (N:M) -->
+  <line x1="230" y1="260" x2="360" y2="400" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="320" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">关注</text>
+  
+  <!-- 关系线 User-Like (1:N) -->
+  <path d="M 230 240 Q 450 240 450 340 Q 450 380 670 380" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  <text x="560" y="330" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">点赞</text>
+  
+  <!-- 关系线 Post-Like (1:N) -->
+  <line x1="540" y1="280" x2="670" y2="360" stroke="#10b981" stroke-width="1.5"/>
+  <text x="590" y="310" font-family="Microsoft YaHei, Arial" font-size="8" fill="#6b7280">被点赞</text>
+  
+  <!-- 图例 -->
+  <rect x="50" y="520" width="800" height="60" rx="8" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="70" y="545" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#2d3748">图例说明：</text>
+  
+  <rect x="150" y="532" width="15" height="15" rx="2" fill="#3b82f6"/>
+  <text x="170" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">User相关字段</text>
+  
+  <rect x="270" y="532" width="15" height="15" rx="2" fill="#10b981"/>
+  <text x="290" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">Post相关字段</text>
+  
+  <rect x="390" y="532" width="15" height="15" rx="2" fill="#f59e0b"/>
+  <text x="410" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">Comment相关</text>
+  
+  <rect x="510" y="532" width="15" height="15" rx="2" fill="#8b5cf6"/>
+  <text x="530" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">Collection</text>
+  
+  <rect x="620" y="532" width="15" height="15" rx="2" fill="#ec4899"/>
+  <text x="640" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">Follow</text>
+  
+  <rect x="700" y="532" width="15" height="15" rx="2" fill="#ef4444"/>
+  <text x="720" y="544" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">Like</text>
+  
+  <line x1="70" y1="560" x2="100" y2="560" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="110" y="564" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">关系连线</text>
+  
+  <text x="200" y="564" font-family="Arial" font-size="9" fill="#4a5568">🔑 主键 · 🔗 外键引用</text>
+  
+  <text x="400" y="564" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">数据库：MongoDB · ODM：Mongoose</text>
+</svg>

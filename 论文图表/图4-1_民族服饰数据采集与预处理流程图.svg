@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="550" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="28" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">民族服饰数据采集与预处理流程图</text>
+  
+  <!-- 阶段1：数据采集 -->
+  <rect x="30" y="55" width="170" height="220" rx="12" fill="white" stroke="#667eea" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="55" width="170" height="35" rx="12" fill="url(#stepGrad1)"/>
+  <rect x="30" y="75" width="170" height="15" fill="url(#stepGrad1)"/>
+  <text x="115" y="78" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">1. 数据采集</text>
+  
+  <rect x="45" y="100" width="140" height="30" rx="5" fill="#edf2f7"/>
+  <text x="115" y="120" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">网络爬虫采集</text>
+  
+  <rect x="45" y="138" width="140" height="30" rx="5" fill="#edf2f7"/>
+  <text x="115" y="158" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">公开数据集下载</text>
+  
+  <rect x="45" y="176" width="140" height="30" rx="5" fill="#edf2f7"/>
+  <text x="115" y="196" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">用户上传贡献</text>
+  
+  <rect x="45" y="214" width="140" height="45" rx="5" fill="#e0e7ff"/>
+  <text x="115" y="234" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">数据来源：</text>
+  <text x="115" y="248" font-family="Arial" font-size="7" text-anchor="middle" fill="#6366f1">56个民族图片库</text>
+  
+  <!-- 箭头1 -->
+  <path d="M 205 165 L 235 165" stroke="#667eea" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 阶段2：数据清洗 -->
+  <rect x="240" y="55" width="170" height="220" rx="12" fill="white" stroke="#f5576c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="240" y="55" width="170" height="35" rx="12" fill="url(#stepGrad2)"/>
+  <rect x="240" y="75" width="170" height="15" fill="url(#stepGrad2)"/>
+  <text x="325" y="78" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">2. 数据清洗</text>
+  
+  <rect x="255" y="100" width="140" height="30" rx="5" fill="#fef2f2"/>
+  <text x="325" y="120" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">去除重复图片</text>
+  
+  <rect x="255" y="138" width="140" height="30" rx="5" fill="#fef2f2"/>
+  <text x="325" y="158" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">删除损坏文件</text>
+  
+  <rect x="255" y="176" width="140" height="30" rx="5" fill="#fef2f2"/>
+  <text x="325" y="196" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">过滤低质量图片</text>
+  
+  <rect x="255" y="214" width="140" height="45" rx="5" fill="#fce7f3"/>
+  <text x="325" y="234" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">质量标准：</text>
+  <text x="325" y="248" font-family="Arial" font-size="7" text-anchor="middle" fill="#ec4899">分辨率≥640×480</text>
+  
+  <!-- 箭头2 -->
+  <path d="M 415 165 L 445 165" stroke="#f5576c" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 阶段3：数据标注 -->
+  <rect x="450" y="55" width="170" height="220" rx="12" fill="white" stroke="#00c6fb" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="55" width="170" height="35" rx="12" fill="url(#stepGrad3)"/>
+  <rect x="450" y="75" width="170" height="15" fill="url(#stepGrad3)"/>
+  <text x="535" y="78" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">3. 数据标注</text>
+  
+  <rect x="465" y="100" width="140" height="30" rx="5" fill="#ecfeff"/>
+  <text x="535" y="120" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">民族类别标注</text>
+  
+  <rect x="465" y="138" width="140" height="30" rx="5" fill="#ecfeff"/>
+  <text x="535" y="158" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">边界框标注</text>
+  
+  <rect x="465" y="176" width="140" height="30" rx="5" fill="#ecfeff"/>
+  <text x="535" y="196" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">特征标签标注</text>
+  
+  <rect x="465" y="214" width="140" height="45" rx="5" fill="#cffafe"/>
+  <text x="535" y="234" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#4a5568">标注格式：</text>
+  <text x="535" y="248" font-family="Arial" font-size="7" text-anchor="middle" fill="#06b6d4">YOLO格式 (.txt)</text>
+  
+  <!-- 箭头3 -->
+  <path d="M 625 165 L 655 165" stroke="#00c6fb" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 阶段4：数据增强 -->
+  <rect x="660" y="55" width="170" height="220" rx="12" fill="white" stroke="#38f9d7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="55" width="170" height="35" rx="12" fill="url(#stepGrad4)"/>
+  <rect x="660" y="75" width="170" height="15" fill="url(#stepGrad4)"/>
+  <text x="745" y="78" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">4. 数据增强</text>
+  
+  <rect x="675" y="100" width="140" height="26" rx="5" fill="#d1fae5"/>
+  <text x="745" y="118" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">随机旋转翻转</text>
+  
+  <rect x="675" y="132" width="140" height="26" rx="5" fill="#d1fae5"/>
+  <text x="745" y="150" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">色彩变换调整</text>
+  
+  <rect x="675" y="164" width="140" height="26" rx="5" fill="#d1fae5"/>
+  <text x="745" y="182" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">缩放裁剪处理</text>
+  
+  <rect x="675" y="196" width="140" height="26" rx="5" fill="#d1fae5"/>
+  <text x="745" y="214" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">Mosaic增强</text>
+  
+  <rect x="675" y="228" width="140" height="31" rx="5" fill="#a7f3d0"/>
+  <text x="745" y="248" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#059669">增强倍数: 3-5倍</text>
+  
+  <!-- 箭头到输出 -->
+  <path d="M 745 280 L 745 310" stroke="#38f9d7" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 阶段5：数据集划分 -->
+  <rect x="30" y="310" width="520" height="220" rx="12" fill="white" stroke="#fa709a" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="310" width="520" height="35" rx="12" fill="url(#stepGrad5)"/>
+  <rect x="30" y="330" width="520" height="15" fill="url(#stepGrad5)"/>
+  <text x="290" y="333" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">5. 数据集划分与存储</text>
+  
+  <!-- 训练集 -->
+  <rect x="50" y="360" width="150" height="80" rx="8" fill="#fef3c7"/>
+  <text x="125" y="385" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#92400e">训练集 Train</text>
+  <text x="125" y="405" font-family="Arial" font-size="18" text-anchor="middle" fill="#d97706">70%</text>
+  <text x="125" y="425" font-family="Arial" font-size="8" text-anchor="middle" fill="#78716c">模型训练学习</text>
+  
+  <!-- 验证集 -->
+  <rect x="215" y="360" width="150" height="80" rx="8" fill="#dbeafe"/>
+  <text x="290" y="385" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#1e40af">验证集 Val</text>
+  <text x="290" y="405" font-family="Arial" font-size="18" text-anchor="middle" fill="#3b82f6">15%</text>
+  <text x="290" y="425" font-family="Arial" font-size="8" text-anchor="middle" fill="#78716c">超参数调优</text>
+  
+  <!-- 测试集 -->
+  <rect x="380" y="360" width="150" height="80" rx="8" fill="#fce7f3"/>
+  <text x="455" y="385" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#9f1239">测试集 Test</text>
+  <text x="455" y="405" font-family="Arial" font-size="18" text-anchor="middle" fill="#ec4899">15%</text>
+  <text x="455" y="425" font-family="Arial" font-size="8" text-anchor="middle" fill="#78716c">模型效果评估</text>
+  
+  <!-- 数据统计 -->
+  <rect x="50" y="450" width="480" height="65" rx="8" fill="#f8fafc"/>
+  <text x="70" y="472" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#4a5568">数据集统计：</text>
+  <text x="70" y="492" font-family="Microsoft YaHei, Arial" font-size="9" fill="#718096">• 总图片数: 8000+ 张</text>
+  <text x="220" y="492" font-family="Microsoft YaHei, Arial" font-size="9" fill="#718096">• 民族类别: 56类</text>
+  <text x="350" y="492" font-family="Microsoft YaHei, Arial" font-size="9" fill="#718096">• 标注文件: YOLO格式</text>
+  <text x="480" y="492" font-family="Microsoft YaHei, Arial" font-size="9" fill="#718096">• 存储: ./model/data/</text>
+  
+  <!-- 输出 -->
+  <rect x="570" y="310" width="290" height="220" rx="12" fill="white" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="570" y="310" width="290" height="35" rx="12" fill="#10b981"/>
+  <text x="715" y="333" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="white">输出结果</text>
+  
+  <rect x="590" y="360" width="250" height="40" rx="6" fill="#d1fae5"/>
+  <text x="715" y="380" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#065f46">📁 清洗后的高质量数据集</text>
+  <text x="715" y="395" font-family="Arial" font-size="8" text-anchor="middle" fill="#047857">符合YOLO格式标准</text>
+  
+  <rect x="590" y="410" width="250" height="40" rx="6" fill="#dbeafe"/>
+  <text x="715" y="430" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#1e40af">📋 标准化标注文件</text>
+  <text x="715" y="445" font-family="Arial" font-size="8" text-anchor="middle" fill="#3b82f6">class_id x_center y_center w h</text>
+  
+  <rect x="590" y="460" width="250" height="55" rx="6" fill="#fef3c7"/>
+  <text x="715" y="480" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#92400e">✅ 数据质量保证</text>
+  <text x="715" y="495" font-family="Arial" font-size="8" text-anchor="middle" fill="#b45309">格式统一 · 标签准确 · 类别平衡</text>
+  <text x="715" y="510" font-family="Arial" font-size="8" text-anchor="middle" fill="#b45309">可直接用于YOLOv8训练</text>
+</svg>

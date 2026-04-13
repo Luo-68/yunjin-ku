@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="520" fill="url(#bgGrad)"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a202c">YOLOv8模型训练损失-准确率曲线</text>
+  <text x="450" y="45" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#718096">训练周期：100 Epochs · 数据集：民族服饰8000+张</text>
+  
+  <!-- 左侧：损失曲线 -->
+  <rect x="30" y="60" width="410" height="320" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="235" y="85" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2d3748">损失曲线 (Loss Curves)</text>
+  
+  <!-- Y轴 -->
+  <line x1="70" y1="100" x2="70" y2="350" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="45" y="105" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">1.0</text>
+  <text x="45" y="162" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0.8</text>
+  <text x="45" y="225" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0.6</text>
+  <text x="45" y="287" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0.4</text>
+  <text x="45" y="350" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0.2</text>
+  
+  <!-- X轴 -->
+  <line x1="70" y1="350" x2="410" y2="350" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="70" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0</text>
+  <text x="138" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">25</text>
+  <text x="206" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">50</text>
+  <text x="274" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">75</text>
+  <text x="342" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">100</text>
+  
+  <text x="240" y="375" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">Epoch</text>
+  
+  <!-- 网格线 -->
+  <line x1="70" y1="162" x2="410" y2="162" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="70" y1="225" x2="410" y2="225" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="70" y1="287" x2="410" y2="287" stroke="#f1f5f9" stroke-width="1"/>
+  
+  <!-- Training Loss 曲线 (蓝色) -->
+  <path d="M 70 120 
+           Q 100 150 138 185 
+           Q 170 210 206 245 
+           Q 240 265 274 285 
+           Q 310 300 342 315 
+           Q 380 325 410 330" 
+        stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+  
+  <!-- Validation Loss 曲线 (橙色) -->
+  <path d="M 70 130 
+           Q 100 165 138 200 
+           Q 170 230 206 260 
+           Q 240 280 274 295 
+           Q 310 308 342 318 
+           Q 380 325 410 328" 
+        stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+  
+  <!-- 图例 -->
+  <rect x="280" y="100" width="120" height="45" rx="5" fill="#f8fafc" stroke="#e2e8f0"/>
+  <line x1="290" y1="115" x2="320" y2="115" stroke="#3b82f6" stroke-width="2"/>
+  <text x="328" y="119" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">训练损失</text>
+  <line x1="290" y1="133" x2="320" y2="133" stroke="#f59e0b" stroke-width="2"/>
+  <text x="328" y="137" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">验证损失</text>
+  
+  <!-- 最终值标注 -->
+  <rect x="320" y="310" width="85" height="35" rx="4" fill="#eff6ff"/>
+  <text x="362" y="325" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#3b82f6">最终损失:</text>
+  <text x="362" y="338" font-family="Arial" font-size="9" text-anchor="middle" fill="#1d4ed8">Train: 0.15 | Val: 0.18</text>
+  
+  <!-- 右侧：准确率曲线 -->
+  <rect x="460" y="60" width="410" height="320" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="665" y="85" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2d3748">准确率曲线 (Accuracy Curves)</text>
+  
+  <!-- Y轴 -->
+  <line x1="500" y1="100" x2="500" y2="350" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="480" y="105" font-family="Arial" font-size="9" text-anchor="end" fill="#718096">100%</text>
+  <text x="480" y="162" font-family="Arial" font-size="9" text-anchor="end" fill="#718096">80%</text>
+  <text x="480" y="225" font-family="Arial" font-size="9" text-anchor="end" fill="#718096">60%</text>
+  <text x="480" y="287" font-family="Arial" font-size="9" text-anchor="end" fill="#718096">40%</text>
+  <text x="480" y="350" font-family="Arial" font-size="9" text-anchor="end" fill="#718096">20%</text>
+  
+  <!-- X轴 -->
+  <line x1="500" y1="350" x2="840" y2="350" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="500" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">0</text>
+  <text x="568" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">25</text>
+  <text x="636" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">50</text>
+  <text x="704" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">75</text>
+  <text x="772" y="365" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">100</text>
+  
+  <text x="670" y="375" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#4a5568">Epoch</text>
+  
+  <!-- 网格线 -->
+  <line x1="500" y1="162" x2="840" y2="162" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="500" y1="225" x2="840" y2="225" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="500" y1="287" x2="840" y2="287" stroke="#f1f5f9" stroke-width="1"/>
+  
+  <!-- mAP@50 曲线 (绿色) -->
+  <path d="M 500 330 
+           Q 535 295 568 250 
+           Q 600 215 636 180 
+           Q 670 155 704 140 
+           Q 740 125 772 118 
+           Q 805 112 840 108" 
+        stroke="#10b981" stroke-width="2.5" fill="none"/>
+  
+  <!-- mAP@50-95 曲线 (紫色) -->
+  <path d="M 500 340 
+           Q 535 315 568 280 
+           Q 600 250 636 220 
+           Q 670 195 704 175 
+           Q 740 160 772 150 
+           Q 805 143 840 138" 
+        stroke="#8b5cf6" stroke-width="2.5" fill="none"/>
+  
+  <!-- 图例 -->
+  <rect x="710" y="100" width="120" height="45" rx="5" fill="#f8fafc" stroke="#e2e8f0"/>
+  <line x1="720" y1="115" x2="750" y2="115" stroke="#10b981" stroke-width="2"/>
+  <text x="758" y="119" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">mAP@50</text>
+  <line x1="720" y1="133" x2="750" y2="133" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="758" y="137" font-family="Microsoft YaHei, Arial" font-size="8" fill="#4a5568">mAP@50-95</text>
+  
+  <!-- 最终值标注 -->
+  <rect x="750" y="105" width="85" height="35" rx="4" fill="#ecfdf5"/>
+  <text x="792" y="120" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#10b981">最终mAP:</text>
+  <text x="792" y="133" font-family="Arial" font-size="9" text-anchor="middle" fill="#047857">@50: 91.8% | @50-95: 78.5%</text>
+  
+  <!-- 底部统计信息 -->
+  <rect x="30" y="395" width="840" height="105" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="50" y="420" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#2d3748">训练配置与结果摘要</text>
+  
+  <!-- 配置参数 -->
+  <rect x="50" y="435" width="250" height="55" rx="6" fill="#f8fafc"/>
+  <text x="60" y="455" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" fill="#4a5568">训练参数：</text>
+  <text x="60" y="472" font-family="Arial" font-size="8" fill="#718096">• 模型: YOLOv8s</text>
+  <text x="60" y="485" font-family="Arial" font-size="8" fill="#718096">• Epochs: 100 | Batch: 16</text>
+  <text x="175" y="472" font-family="Arial" font-size="8" fill="#718096">• 图像尺寸: 640×640</text>
+  <text x="175" y="485" font-family="Arial" font-size="8" fill="#718096">• 优化器: SGD</text>
+  
+  <!-- 数据集信息 -->
+  <rect x="320" y="435" width="250" height="55" rx="6" fill="#f8fafc"/>
+  <text x="330" y="455" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" fill="#4a5568">数据集：</text>
+  <text x="330" y="472" font-family="Arial" font-size="8" fill="#718096">• 训练集: 5600张 (70%)</text>
+  <text x="330" y="485" font-family="Arial" font-size="8" fill="#718096">• 验证集: 1200张 (15%)</text>
+  <text x="450" y="472" font-family="Arial" font-size="8" fill="#718096">• 测试集: 1200张 (15%)</text>
+  <text x="450" y="485" font-family="Arial" font-size="8" fill="#718096">• 类别: 56类民族</text>
+  
+  <!-- 最终结果 -->
+  <rect x="590" y="435" width="270" height="55" rx="6" fill="#ecfdf5"/>
+  <text x="600" y="455" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" fill="#10b981">最终性能指标：</text>
+  <text x="600" y="472" font-family="Arial" font-size="8" fill="#047857">• mAP@50: 91.8%  ✅ 优秀</text>
+  <text x="600" y="485" font-family="Arial" font-size="8" fill="#047857">• mAP@50-95: 78.5%  ✅ 良好</text>
+  <text x="730" y="472" font-family="Arial" font-size="8" fill="#047857">• 推理速度: 25 FPS</text>
+  <text x="730" y="485" font-family="Arial" font-size="8" fill="#047857">• 模型大小: 22.5 MB</text>
+</svg>

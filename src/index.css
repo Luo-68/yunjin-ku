@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-ink-800 text-mist-100;
+  }
+  
+  body {
+    @apply font-sans antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply px-4 md:px-8 lg:px-12 mx-auto max-w-[1600px]; 
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden px-8 py-3 bg-gold-500 text-ink-900 font-medium transition-all duration-300 hover:bg-gold-300 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply relative overflow-hidden px-8 py-3 border border-gold-500/30 text-gold-500 font-medium transition-all duration-300 hover:bg-gold-500/10 hover:border-gold-500 active:scale-95;
+  }
+
+  .glass-panel {
+    @apply bg-ink-900/60 backdrop-blur-md border border-mist-100/5;
+  }
+
+  .nav-link {
+    @apply relative text-mist-500 hover:text-gold-500 transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-[1px] bg-gold-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-ink-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-500 rounded-full hover:bg-gold-700 transition-colors;
+}
+
+/* Soft Silk and Water Ripple Background Animation System */
+.silk-background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, 
+    rgba(42, 24, 16, 0.8) 0%, 
+    rgba(26, 15, 8, 0.9) 100%);
+  overflow: hidden;
+}
+
+.silk-layer {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  transition: all 1.2s ease-out;
+}
+
+.silk-soft-flow-1 {
+  background: linear-gradient(45deg, 
+    transparent 25%, 
+    rgba(255, 223, 186, 0.2) 40%, 
+    rgba(255, 248, 220, 0.15) 50%, 
+    rgba(255, 223, 186, 0.1) 60%, 
+    transparent 75%);
+  animation: silkSoftFlow1 30s ease-in-out infinite alternate;
+}
+
+.silk-soft-flow-2 {
+  background: linear-gradient(-45deg, 
+    transparent 20%, 
+    rgba(255, 248, 220, 0.15) 35%, 
+    rgba(255, 253, 231, 0.1) 50%, 
+    rgba(255, 248, 220, 0.15) 65%, 
+    transparent 80%);
+  animation: silkSoftFlow2 35s ease-in-out infinite alternate-reverse;
+}
+
+.silk-soft-flow-3 {
+  background: linear-gradient(90deg, 
+    transparent 20%, 
+    rgba(255, 253, 231, 0.1) 40%, 
+    rgba(255, 248, 220, 0.12) 50%, 
+    rgba(255, 253, 231, 0.1) 60%, 
+    transparent 80%);
+  animation: silkSoftFlow3 40s ease-in-out infinite alternate;
+}
+
+.water-ripple {
+  background: radial-gradient(circle at center,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.03) 30%,
+    transparent 60%);
+  animation: waterRipple 25s ease-in-out infinite alternate;
+}
+
+.silk-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent, 
+      transparent 15px, 
+      rgba(255, 248, 220, 0.03) 15px, 
+      rgba(255, 248, 220, 0.03) 16px),
+    repeating-linear-gradient(-45deg, 
+      transparent, 
+      transparent 15px, 
+      rgba(255, 248, 220, 0.03) 15px, 
+      rgba(255, 248, 220, 0.03) 16px);
+  animation: silkPatternDrift 60s linear infinite;
+}
+
+.silk-soft-cloud {
+  position: absolute;
+  background: radial-gradient(ellipse at center, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.6;
+}
+
+.silk-soft-cloud-1 {
+  width: 450px;
+  height: 220px;
+  top: 20%;
+  left: 8%;
+  animation: silkSoftFloatCloud 35s ease-in-out infinite alternate;
+}
+
+.silk-soft-cloud-2 {
+  width: 550px;
+  height: 280px;
+  top: 50%;
+  right: 10%;
+  animation: silkSoftFloatCloud 40s ease-in-out infinite alternate-reverse;
+}
+
+.silk-soft-cloud-3 {
+  width: 350px;
+  height: 180px;
+  bottom: 18%;
+  left: 30%;
+  animation: silkSoftFloatCloud 32s ease-in-out infinite alternate;
+}
+
+@keyframes silkSoftFlow1 {
+  0% { transform: translateX(-8%) translateY(-5%) rotate(0deg) scale(1); }
+  100% { transform: translateX(8%) translateY(5%) rotate(0.5deg) scale(1.03); }
+}
+
+@keyframes silkSoftFlow2 {
+  0% { transform: translateX(8%) translateY(5%) rotate(0deg) scale(1); }
+  100% { transform: translateX(-8%) translateY(-5%) rotate(-0.5deg) scale(1.02); }
+}
+
+@keyframes silkSoftFlow3 {
+  0% { transform: translateX(0%) translateY(0%) scale(1) rotate(0deg); }
+  100% { transform: translateX(-5%) translateY(5%) scale(1.02) rotate(0.3deg); }
+}
+
+@keyframes waterRipple {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+  100% { transform: scale(1.1) rotate(5deg); opacity: 0.6; }
+}
+
+@keyframes silkPatternDrift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-30px, -30px); }
+}
+
+@keyframes silkSoftFloatCloud {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(20px, -15px) scale(1.05); opacity: 0.7; }
+}
+
+/* Ethnicity Card Hover Effects */
+.ethnicity-card {
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  backdrop-filter: blur(10px);
+}
+
+.ethnicity-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+}
+
+.ethnicity-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(212, 175, 55, 0.1) 0%, 
+    transparent 50%, 
+    rgba(212, 175, 55, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: inherit;
+}
+
+.ethnicity-card:hover::before {
+  opacity: 1;
+}
+
+/* Mouse Tracking Liquid Effect */
+.liquid-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+/* Ethnic Names List Styling */
+.ethnic-name-item {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ethnic-name-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+.ethnic-name-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ethnic-name-item:hover::before {
+  opacity: 1;
+}
+
+/* Compact Ethnic Names Styling - Bureau Cool Archive Style */
+.ethnic-name-item-compact {
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.15rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ethnic-name-item-compact:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.ethnic-name-item-compact.highlighted {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+}
+
+/* Immersive Gallery Layout */
+.immersive-gallery {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.ethnicity-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Compact Ethnic Names Grid - Bureau Cool Archive Style */
+.ethnicity-grid-compact {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Detail Page Styling */
+.ethnicity-detail {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.detail-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.detail-content {
+  position: relative;
+  z-index: 10;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ethnicity-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  .silk-layer {
+    opacity: 0.5;
+  }
+  
+  .silk-cloud {
+    transform: scale(0.7);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .silk-background {
+    filter: brightness(0.9) contrast(1.1);
+  }
+}
+
+/* Background Image Animation */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.slow-zoom {
+  animation: slowZoom 15s ease-in-out infinite;
+}

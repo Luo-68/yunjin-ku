@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backboneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="520" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="28" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a202c">YOLOv8网络结构简图</text>
+  <text x="450" y="48" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#718096">用于民族服饰智能识别的深度学习模型架构</text>
+  
+  <!-- 输入 -->
+  <rect x="20" y="90" width="80" height="300" rx="8" fill="#edf2f7" stroke="#cbd5e0" filter="url(#shadow)"/>
+  <text x="60" y="115" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">输入</text>
+  <text x="60" y="135" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">Input</text>
+  <rect x="30" y="155" width="60" height="50" rx="5" fill="#e2e8f0"/>
+  <text x="60" y="175" font-family="Arial" font-size="18" text-anchor="middle">🖼️</text>
+  <text x="60" y="200" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">640×640</text>
+  <text x="60" y="215" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">RGB图像</text>
+  
+  <!-- Backbone骨干网络 -->
+  <rect x="120" y="70" width="280" height="340" rx="12" fill="url(#backboneGrad)" filter="url(#shadow)"/>
+  <text x="260" y="95" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Backbone 骨干网络</text>
+  <text x="260" y="110" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.8)">特征提取模块 (CSPDarknet53)</text>
+  
+  <!-- Conv层 -->
+  <rect x="135" y="125" width="250" height="32" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <text x="260" y="145" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="white">Conv 3×3, stride=2 → 320×320</text>
+  
+  <rect x="135" y="165" width="250" height="32" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <text x="260" y="185" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="white">Conv 3×3, stride=2 → 160×160</text>
+  
+  <!-- C2f模块 -->
+  <rect x="135" y="205" width="250" height="35" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="260" y="218" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">C2f 模块</text>
+  <text x="260" y="233" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">跨阶段部分连接</text>
+  
+  <rect x="135" y="248" width="250" height="32" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <text x="260" y="268" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="white">Conv 3×3, stride=2 → 80×80</text>
+  
+  <!-- SPPF -->
+  <rect x="135" y="288" width="250" height="35" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="260" y="301" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">SPPF 空间金字塔池化</text>
+  <text x="260" y="316" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">5×5, 9×9, 13×13 核</text>
+  
+  <!-- 输出特征 -->
+  <rect x="135" y="333" width="75" height="28" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="172" y="351" font-family="Arial" font-size="8" text-anchor="middle" fill="white">P3: 80×80</text>
+  
+  <rect x="222" y="333" width="75" height="28" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="260" y="351" font-family="Arial" font-size="8" text-anchor="middle" fill="white">P4: 40×40</text>
+  
+  <rect x="310" y="333" width="75" height="28" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="347" y="351" font-family="Arial" font-size="8" text-anchor="middle" fill="white">P5: 20×20</text>
+  
+  <text x="260" y="385" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.8)">多尺度特征图输出</text>
+  
+  <!-- 箭头 -->
+  <path d="M 405 240 L 430 240" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Neck颈部网络 -->
+  <rect x="420" y="70" width="220" height="340" rx="12" fill="url(#neckGrad)" filter="url(#shadow)"/>
+  <text x="530" y="95" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Neck 颈部网络</text>
+  <text x="530" y="110" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.8)">特征融合模块 (FPN+PAN)</text>
+  
+  <!-- FPN -->
+  <rect x="435" y="125" width="190" height="45" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="530" y="145" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">FPN 自顶向下</text>
+  <text x="530" y="162" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">上采样 + 融合</text>
+  
+  <!-- PAN -->
+  <rect x="435" y="180" width="190" height="45" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="530" y="200" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">PAN 自底向上</text>
+  <text x="530" y="217" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">下采样 + 融合</text>
+  
+  <!-- Concat -->
+  <rect x="435" y="235" width="190" height="40" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <text x="530" y="258" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="white">Concat 拼接融合</text>
+  
+  <!-- 特征金字塔说明 -->
+  <rect x="435" y="285" width="190" height="70" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="530" y="305" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">特征金字塔输出</text>
+  <text x="530" y="322" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">小目标: 80×80</text>
+  <text x="530" y="337" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">中目标: 40×40</text>
+  <text x="530" y="352" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">大目标: 20×20</text>
+  
+  <text x="530" y="390" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.8)">增强语义信息</text>
+  
+  <!-- 箭头 -->
+  <path d="M 645 240 L 670 240" stroke="#5d6d7e" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Head检测头 -->
+  <rect x="660" y="70" width="220" height="340" rx="12" fill="url(#headGrad)" filter="url(#shadow)"/>
+  <text x="770" y="95" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Head 检测头</text>
+  <text x="770" y="110" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.8)">解耦检测头 (Decoupled)</text>
+  
+  <!-- 分类分支 -->
+  <rect x="675" y="125" width="190" height="50" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="770" y="148" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">分类分支</text>
+  <text x="770" y="166" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">56类民族服饰分类</text>
+  
+  <!-- 回归分支 -->
+  <rect x="675" y="185" width="190" height="50" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <text x="770" y="208" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">回归分支</text>
+  <text x="770" y="226" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">边界框坐标回归</text>
+  
+  <!-- DFL -->
+  <rect x="675" y="245" width="190" height="45" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <text x="770" y="265" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">DFL 分布焦点损失</text>
+  <text x="770" y="282" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">提升定位精度</text>
+  
+  <!-- 输出结果 -->
+  <rect x="675" y="300" width="190" height="80" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="770" y="320" font-family="Microsoft YaHei, Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">检测结果输出</text>
+  <text x="770" y="340" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">类别: 苗族、藏族...</text>
+  <text x="770" y="355" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">置信度: 0.0-1.0</text>
+  <text x="770" y="370" font-family="Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.9)">边界框: [x,y,w,h]</text>
+  
+  <text x="770" y="395" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.8)">NMS后处理</text>
+  
+  <!-- 输出 -->
+  <rect x="800" y="90" width="80" height="300" rx="8" fill="#edf2f7" stroke="#cbd5e0" filter="url(#shadow)"/>
+  <text x="840" y="115" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#4a5568">输出</text>
+  <text x="840" y="135" font-family="Arial" font-size="9" text-anchor="middle" fill="#718096">Output</text>
+  <rect x="810" y="155" width="60" height="50" rx="5" fill="#e2e8f0"/>
+  <text x="840" y="175" font-family="Arial" font-size="18" text-anchor="middle">🎯</text>
+  <text x="840" y="200" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">检测结果</text>
+  <text x="840" y="215" font-family="Arial" font-size="8" text-anchor="middle" fill="#718096">类别+置信度</text>
+  
+  <!-- 底部说明 -->
+  <rect x="20" y="430" width="860" height="70" rx="10" fill="white" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="40" y="455" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#2d3748">模型特点：</text>
+  <text x="40" y="475" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• YOLOv8采用端到端单阶段检测架构，相比两阶段检测器具有更快的推理速度</text>
+  <text x="40" y="490" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• Backbone使用CSPDarknet53结构，结合C2f模块实现高效特征提取</text>
+  <text x="500" y="475" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• Neck采用FPN+PAN结构，融合多尺度特征</text>
+  <text x="500" y="490" font-family="Microsoft YaHei, Arial" font-size="9" fill="#4a5568">• Head使用解耦头，分离分类和回归任务</text>
+</svg>

@@ -1,0 +1,95 @@
+# YOLOv8 配置文件 - 民族服饰关键区域检测
+
+# 模型配置
+model:
+  name: yolov8n  # 使用nano版本，轻量快速
+  pretrained: true  # 使用预训练权重
+  classes: 6  # 类别数：neckline, embroidery, silver, pattern, sleeve, waistband
+
+# 数据集配置
+data:
+  train: ../data/images/train
+  val: ../data/images/val
+  labels_train: ../data/labels/train
+  labels_val: ../data/labels/val
+  names:
+    0: neckline
+    1: embroidery
+    2: silver
+    3: pattern
+    4: sleeve
+    5: waistband
+
+# 训练配置
+train:
+  epochs: 100
+  batch_size: 16
+  img_size: 640
+  lr: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3
+  patience: 50  # 早停耐心值
+  save_period: 10  # 每10个epoch保存一次
+  device: 0  # 使用GPU 0，-1为CPU
+  workers: 8  # 数据加载线程数
+  project: checkpoint
+  name: ethnic_region_detector
+  exist_ok: true
+  pretrained: true
+  optimizer: SGD
+  verbose: true
+  seed: 0
+  deterministic: true
+  single_cls: false
+  rect: false
+  cos_lr: false
+  close_mosaic: 10
+  resume: false
+  amp: true
+
+# 增强配置
+augment:
+  hsv_h: 0.015  # 色调增强
+  hsv_s: 0.7  # 饱和度增强
+  hsv_v: 0.4  # 明度增强
+  degrees: 0.0  # 旋转角度
+  translate: 0.1  # 平移
+  scale: 0.5  # 缩放
+  shear: 0.0  # 剪切
+  perspective: 0.0  # 透视变换
+  flipud: 0.0  # 上下翻转
+  fliplr: 0.5  # 左右翻转
+  mosaic: 1.0  # 马赛克增强
+  mixup: 0.0  # 混合增强
+
+# 推理配置
+inference:
+  conf_thres: 0.25  # 置信度阈值
+  iou_thres: 0.45  # IOU阈值
+  max_det: 100  # 最大检测数
+  device: 0
+  half: false  # 是否使用FP16
+  dnn: false
+  vid_stride: 1
+  stream_buffer: false
+  visualize: false
+  augment: false
+  agnostic_nms: false
+  classes: null
+  retina_masks: false
+  embed: null
+
+# 模型输出配置
+output:
+  checkpoint_dir: checkpoint
+  best_model: best.pt
+  last_model: last.pt
+  results: results.csv
+
+# 日志配置
+logging:
+  project: ethnic_region_detector
+  name: train
+  save_dir: checkpoint/ethnic_region_detector
+  exist_ok: true

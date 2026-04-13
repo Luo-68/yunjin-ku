@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="imgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8ecf1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#fafbfc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="25" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">模型识别效果案例对比图</text>
+  <text x="450" y="45" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#7f8c8d">左侧为用户上传原图，右侧为系统识别结果</text>
+  
+  <!-- 案例标题 -->
+  <text x="145" y="68" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">案例一：苗族服饰</text>
+  
+  <!-- 原图区域 -->
+  <rect x="30" y="80" width="230" height="140" rx="8" fill="url(#imgGrad)" stroke="#dfe6ed" filter="url(#shadow)"/>
+  <text x="145" y="145" font-family="Arial" font-size="30" text-anchor="middle" fill="#bdc3c7">📷</text>
+  <text x="145" y="175" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#95a5a6">原图：苗族服饰照片</text>
+  <text x="145" y="190" font-family="Arial" font-size="8" text-anchor="middle" fill="#bdc3c7">建议尺寸: 640×480</text>
+  
+  <!-- 箭头 -->
+  <path d="M 270 150 L 295 150" stroke="#3498db" stroke-width="3" fill="none"/>
+  <polygon points="295,145 310,150 295,155" fill="#3498db"/>
+  <text x="283" y="138" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#3498db">识别</text>
+  
+  <!-- 识别结果区域 -->
+  <rect x="320" y="80" width="260" height="140" rx="8" fill="white" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- 结果头部 -->
+  <rect x="320" y="80" width="260" height="28" rx="8" fill="#3498db"/>
+  <rect x="320" y="95" width="260" height="13" fill="#3498db"/>
+  <text x="450" y="100" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">识别结果</text>
+  
+  <!-- 识别结果内容 -->
+  <rect x="332" y="118" width="236" height="38" rx="4" fill="#e8f8f5"/>
+  <text x="345" y="135" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#1abc9c">民族：苗族</text>
+  <text x="345" y="150" font-family="Arial" font-size="10" fill="#27ae60">置信度：94.5%</text>
+  
+  <text x="335" y="172" font-family="Microsoft YaHei, Arial" font-size="9" fill="#5d6d7e">文化解读：</text>
+  <text x="335" y="185" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">苗族服饰以银饰、刺绣、蜡染为特色...</text>
+  <text x="335" y="198" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">主要分布在贵州、湖南、云南等地...</text>
+  
+  <!-- 案例二 -->
+  <text x="145" y="245" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">案例二：藏族服饰</text>
+  
+  <!-- 原图区域 -->
+  <rect x="30" y="257" width="230" height="140" rx="8" fill="url(#imgGrad)" stroke="#dfe6ed" filter="url(#shadow)"/>
+  <text x="145" y="322" font-family="Arial" font-size="30" text-anchor="middle" fill="#bdc3c7">📷</text>
+  <text x="145" y="352" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#95a5a6">原图：藏族服饰照片</text>
+  <text x="145" y="367" font-family="Arial" font-size="8" text-anchor="middle" fill="#bdc3c7">建议尺寸: 640×480</text>
+  
+  <!-- 箭头 -->
+  <path d="M 270 327 L 295 327" stroke="#e74c3c" stroke-width="3" fill="none"/>
+  <polygon points="295,322 310,327 295,332" fill="#e74c3c"/>
+  <text x="283" y="315" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#e74c3c">识别</text>
+  
+  <!-- 识别结果区域 -->
+  <rect x="320" y="257" width="260" height="140" rx="8" fill="white" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- 结果头部 -->
+  <rect x="320" y="257" width="260" height="28" rx="8" fill="#e74c3c"/>
+  <rect x="320" y="272" width="260" height="13" fill="#e74c3c"/>
+  <text x="450" y="277" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">识别结果</text>
+  
+  <!-- 识别结果内容 -->
+  <rect x="332" y="295" width="236" height="38" rx="4" fill="#fdedec"/>
+  <text x="345" y="312" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#e74c3c">民族：藏族</text>
+  <text x="345" y="327" font-family="Arial" font-size="10" fill="#c0392b">置信度：91.2%</text>
+  
+  <text x="335" y="350" font-family="Microsoft YaHei, Arial" font-size="9" fill="#5d6d7e">文化解读：</text>
+  <text x="335" y="363" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">藏族服饰以藏袍、氆氇为特色...</text>
+  <text x="335" y="376" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">主要分布在西藏、青海等地...</text>
+  
+  <!-- 案例三 -->
+  <text x="145" y="420" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">案例三：维吾尔族服饰</text>
+  
+  <!-- 原图区域 -->
+  <rect x="30" y="432" width="230" height="130" rx="8" fill="url(#imgGrad)" stroke="#dfe6ed" filter="url(#shadow)"/>
+  <text x="145" y="490" font-family="Arial" font-size="30" text-anchor="middle" fill="#bdc3c7">📷</text>
+  <text x="145" y="520" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#95a5a6">原图：维吾尔族服饰照片</text>
+  <text x="145" y="535" font-family="Arial" font-size="8" text-anchor="middle" fill="#bdc3c7">建议尺寸: 640×480</text>
+  
+  <!-- 箭头 -->
+  <path d="M 270 497 L 295 497" stroke="#9b59b6" stroke-width="3" fill="none"/>
+  <polygon points="295,492 310,497 295,502" fill="#9b59b6"/>
+  <text x="283" y="485" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#9b59b6">识别</text>
+  
+  <!-- 识别结果区域 -->
+  <rect x="320" y="432" width="260" height="130" rx="8" fill="white" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- 结果头部 -->
+  <rect x="320" y="432" width="260" height="28" rx="8" fill="#9b59b6"/>
+  <rect x="320" y="447" width="260" height="13" fill="#9b59b6"/>
+  <text x="450" y="452" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">识别结果</text>
+  
+  <!-- 识别结果内容 -->
+  <rect x="332" y="470" width="236" height="35" rx="4" fill="#f5eef8"/>
+  <text x="345" y="487" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#9b59b6">民族：维吾尔族</text>
+  <text x="345" y="500" font-family="Arial" font-size="10" fill="#8e44ad">置信度：89.8%</text>
+  
+  <text x="335" y="520" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">维吾尔族服饰以艾德莱斯绸、花帽为特色...</text>
+  <text x="335" y="533" font-family="Microsoft YaHei, Arial" font-size="8" fill="#7f8c8d">主要分布在新疆地区...</text>
+  
+  <!-- 右侧统计面板 -->
+  <rect x="620" y="80" width="250" height="482" rx="10" fill="white" stroke="#e0e0e0" filter="url(#shadow)"/>
+  <text x="745" y="105" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">识别效果统计</text>
+  
+  <!-- 统计数据 -->
+  <rect x="635" y="118" width="220" height="55" rx="5" fill="#e8f8f5"/>
+  <text x="745" y="140" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#1abc9c">平均识别准确率</text>
+  <text x="745" y="163" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#1abc9c">91.8%</text>
+  
+  <rect x="635" y="180" width="220" height="55" rx="5" fill="#e8f4fd"/>
+  <text x="745" y="202" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#3498db">支持民族类别</text>
+  <text x="745" y="225" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#3498db">56类</text>
+  
+  <rect x="635" y="242" width="220" height="55" rx="5" fill="#fef5e7"/>
+  <text x="745" y="264" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#f39c12">平均响应时间</text>
+  <text x="745" y="287" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#f39c12">850ms</text>
+  
+  <rect x="635" y="304" width="220" height="55" rx="5" fill="#fdedec"/>
+  <text x="745" y="326" font-family="Microsoft YaHei, Arial" font-size="10" text-anchor="middle" fill="#e74c3c">测试样本数量</text>
+  <text x="745" y="349" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#e74c3c">2000+</text>
+  
+  <!-- 高置信度分布 -->
+  <text x="650" y="385" font-family="Microsoft YaHei, Arial" font-size="10" fill="#5d6d7e">置信度分布：</text>
+  <rect x="650" y="395" width="150" height="14" rx="3" fill="#ecf0f1"/>
+  <rect x="650" y="395" width="130" height="14" rx="3" fill="#27ae60"/>
+  <text x="725" y="406" font-family="Arial" font-size="8" text-anchor="middle" fill="white">≥90%: 85%</text>
+  
+  <rect x="650" y="415" width="150" height="14" rx="3" fill="#ecf0f1"/>
+  <rect x="650" y="415" width="25" height="14" rx="3" fill="#f39c12"/>
+  <text x="725" y="426" font-family="Arial" font-size="8" text-anchor="middle" fill="#5d6d7e">80-90%: 12%</text>
+  
+  <rect x="650" y="435" width="150" height="14" rx="3" fill="#ecf0f1"/>
+  <rect x="650" y="435" width="12" height="14" rx="3" fill="#e74c3c"/>
+  <text x="725" y="446" font-family="Arial" font-size="8" text-anchor="middle" fill="#5d6d7e">&lt;80%: 3%</text>
+  
+  <!-- 底部说明 -->
+  <rect x="635" y="465" width="220" height="85" rx="5" fill="#f8f9fa"/>
+  <text x="745" y="485" font-family="Microsoft YaHei, Arial" font-size="9" text-anchor="middle" fill="#7f8c8d">说明：</text>
+  <text x="745" y="502" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#95a5a6">实际图片请从线上系统</text>
+  <text x="745" y="517" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#95a5a6">截图替换占位符</text>
+  <text x="745" y="532" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#95a5a6">建议每组案例为同一张</text>
+  <text x="745" y="547" font-family="Microsoft YaHei, Arial" font-size="8" text-anchor="middle" fill="#95a5a6">图片的原图与结果对比</text>
+</svg>

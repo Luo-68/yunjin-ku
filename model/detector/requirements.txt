@@ -1,0 +1,23 @@
+# YOLOv8 民族服饰关键区域检测模型依赖
+
+# 核心依赖
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 图像处理
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# 配置文件处理
+pyyaml>=6.0
+
+# 进度条
+tqdm>=4.65.0
+
+# 数据增强
+albumentations>=1.3.0
+
+# 日志
+tensorboard>=2.13.0
